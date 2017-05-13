@@ -6,15 +6,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import beans.DataModel;
-import DAO.DataDAOImpl;
+import dao.impl.DataDaoImpl;
 
 @Service
 public class DataService {
 	@Autowired
-	private DataDAOImpl dataDAOImpl;
+	private DataDaoImpl dataDaoImpl;
 	
 	public List<DataModel> getAllData(int id){
-		dataDAOImpl.setID(id);
-		return dataDAOImpl.getAllData();
+		dataDaoImpl.setID(id);
+		return dataDaoImpl.getAllData();
 	}
 }

@@ -14,9 +14,10 @@ public final class DataController {
 	@Autowired
 	private DataService dataService;
 	
-	@RequestMapping(value="/data/{id}",method=RequestMethod.GET, produces="text/html; charset=utf-8")
+	@RequestMapping(value="/data/{id}",method=RequestMethod.GET, produces="text/plain; charset=utf-8")
 	public String getAllData(@PathVariable int id, HttpServletRequest request, HttpServletResponse response){
-		return "";
+		System.out.println("here");
+		return ""+id;
 	}
 	
 }

@@ -1,6 +1,8 @@
-package DAO;
+package dao.impl;
 
 import java.util.List;
+
+import java.sql.Connection;
 
 import javax.sql.DataSource;
 
@@ -11,10 +13,11 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
 
 import beans.DataModel;
+import dao.DataDao;
 
 
 @Component
-public final class DataDAOImpl {
+public class DataDaoImpl implements DataDao {
 	@Autowired
 	private DataSource dataSource;
 	
